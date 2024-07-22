@@ -1,5 +1,8 @@
 # demeter
-Demeter is an LLM Retreival Augmented Generation system using ReACT to provide gardening advice.
+Demeter is an LLM Retreival Augmented Generation system using ReACT to provide gardening advice. 
+
+## Design
+Demeter is a ChatGPT3.5-Turbo-based assistant focused on providing gardening advice. The core idea behind Demeter is that we use a few pieces of information gathered from the system (geolocation of user, local weather), gathered from the user (plants present in garden, question), and gathered from the internet at large (plant information, gardening advice, etc) to provide up-to-date and contextually intelligent advice on plant care. Modes of input and output such as speech for user input (just nice, not impactful on functionality), use of camera images as input (very helpful, but a bit more prone to hallucination and confusion), and output from demeter like notifications (could be nice) and schematics (also nice, just unclear on usefulness).
 
 ## Technology Stack
 * Python3 as primary development language.
@@ -9,7 +12,7 @@ Demeter is an LLM Retreival Augmented Generation system using ReACT to provide g
   - [AzureML](https://azure.microsoft.com/en-ca/products/machine-learning) services for running other LLMs if necessary.
   - [AzureAISpeech](https://azure.microsoft.com/en-us/products/ai-services/ai-speech/) for speech interaction if viable.
   - [AzureCosmosDB](https://python.langchain.com/v0.2/docs/integrations/vectorstores/azure_cosmos_db_no_sql/) for vector storage.
-* [Django](https://docs.djangoproject.com/en/5.0/intro/tutorial01/) for web interface (most widely-used Python3 web library, never used, but I've used Flask and done webdev with JS).
+* [Django](https://docs.djangoproject.com/en/5.0/intro/tutorial01/) for web interface.
   - Notification method:
   - GPS information method:
   - Time information method:
@@ -19,6 +22,6 @@ Demeter is an LLM Retreival Augmented Generation system using ReACT to provide g
   - Using [RAG](https://python.langchain.com/v0.2/docs/tutorials/rag/) and [ReAcT](https://python.langchain.com/v0.1/docs/modules/agents/agent_types/react/), [tool-calling](https://python.langchain.com/v0.1/docs/modules/agents/agent_types/tool_calling/) techniques for central LLM.
   - Probably use [LLaVA](https://github.com/LLaVA-VL/LLaVA-NeXT/?tab=readme-ov-file) for VLM stuff if I get to it.
 * Data sources:
-  - Plant information:
-  - Weather information:
-  - 
+  - Plant information: [Trefle}(http://trefle.io/) or [RapidAPIPlants](https://rapidapi.com/tuvshno/api/plants10)
+  - Weather information: [OpenWeather](https://openweathermap.org/api)
+  - Geolocation: [GeoIP](https://docs.djangoproject.com/en/1.11/ref/contrib/gis/geoip/)
