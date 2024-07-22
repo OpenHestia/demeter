@@ -1,5 +1,6 @@
 # demeter
-![image](https://github.com/user-attachments/assets/7b245dbf-bbf9-44cc-840f-6c71dd36283b)
+![image](https://github.com/user-attachments/assets/02965126-358c-48e6-a55e-4faa7677172e)
+
 
 Demeter is an LLM Retreival Augmented Generation system using ReACT to provide gardening advice. 
 
