@@ -13,3 +13,7 @@ Demeter is a ChatGPT3.5-Turbo-based assistant focused on providing gardening adv
 - We also need some storage for user-specific context, history, and data.
 - We'll need a web app wrapping the application.
 - If I want to use LLava or another VLM to do image-based generation, we'll need some hosting for that as well. 
+
+## Organization
+- oracle_dev: This folder contains on-device prototyping files for the Demeter Oracle (the RAG)
+- oracle_azfunc: Azure function servince the Demeter Oracle.
