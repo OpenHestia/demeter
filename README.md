@@ -17,3 +17,4 @@ Demeter is a ChatGPT3.5-Turbo-based assistant focused on providing gardening adv
 ## Organization
 - oracle_dev: This folder contains on-device prototyping files for the Demeter Oracle (the RAG)
 - oracle_azfunc: Azure function servince the Demeter Oracle.
+- oracle_indexing_azcs: Script that initiates the Azure Cognitive Search vector store for the Demeter Oracle Function.
