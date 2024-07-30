@@ -3,3 +3,11 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
+langchain==0.2.11
+langchain_community==0.2.10
+langchain_core==0.2.24
+langchain_openai==0.1.19
+langchain_text_splitters==0.2.2
+python-decouple==3.8
+tqdm==4.66.1
+

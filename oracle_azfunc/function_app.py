@@ -5,9 +5,7 @@
 # https://learn.microsoft.com/en-ca/azure/azure-functions/create-first-function-cli-python?tabs=linux%2Cbash%2Cazure-cli%2Cbrowser
 from decouple import config
 import os
-os.environ['OPENAI_API_KEY'] = config('OPENAI_API_KEY')
 VS_ADDRESS = "https://rag-vector-store.search.windows.net"
-VS_KEY = config('AZ_AIS_KEY')
 
 import azure.functions as func
 import datetime
@@ -28,6 +26,7 @@ from langchain_core.runnables import RunnablePassthrough
 
 app = func.FunctionApp()
 
+@app.function_name(name="demeter-oracle")
 @app.route(route="ask", auth_level='anonymous', methods=['GET'])
 def ask_wrapper(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
