@@ -161,9 +161,11 @@ def main():
             | StrOutputParser())
 
     while True:
-        question = input("Input: ")
-        print(rag_chain.invoke(question))
-
+        question = input("Question: ")
+        print("Demeter:", end=" ", flush=True)
+        for chunk in rag_chain.stream(question):
+            print(chunk, end="", flush=True)
+        print("\n------")
 
 if __name__ == '__main__':
     main()
