@@ -20,7 +20,7 @@ jobs:
     environment: az-oracle-function
     defaults:
       run:
-        working-directory: oracle_azfunc
+        working-directory: ./oracle_azfunc
 
 
     steps:
