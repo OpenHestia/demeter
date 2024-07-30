@@ -17,9 +17,10 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    run:
-      shell: bash
-      working-directory: ./oracle_azfunc
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./oracle_azfunc
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
