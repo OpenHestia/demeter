@@ -20,6 +20,7 @@ jobs:
     environment: az-oracle-function
     defaults:
       run:
+        shell: bash
         working-directory: ./oracle_azfunc
 
 
