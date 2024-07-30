@@ -5,9 +5,7 @@
 # https://learn.microsoft.com/en-ca/azure/azure-functions/create-first-function-cli-python?tabs=linux%2Cbash%2Cazure-cli%2Cbrowser
 from decouple import config
 import os
-os.environ['OPENAI_API_KEY'] = config('OPENAI_API_KEY')
 VS_ADDRESS = "https://rag-vector-store.search.windows.net"
-VS_KEY = config('AZ_AIS_KEY')
 
 import azure.functions as func
 import datetime
