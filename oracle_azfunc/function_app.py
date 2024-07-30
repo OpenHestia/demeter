@@ -26,6 +26,7 @@ from langchain_core.runnables import RunnablePassthrough
 
 app = func.FunctionApp()
 
+@app.function_name(name="demeter-oracle")
 @app.route(route="ask", auth_level='anonymous', methods=['GET'])
 def ask_wrapper(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
