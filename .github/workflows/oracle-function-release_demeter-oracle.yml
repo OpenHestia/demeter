@@ -17,6 +17,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+     run:
+        shell: bash
+        working-directory: ./oracle_azfunc
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -44,8 +47,8 @@ jobs:
         with:
           name: python-app
           path: |
-            release.zip
-            !venv/
+            ./oracle_azfunc/release.zip
+            !./oracle_azfunc/venv/
 
   deploy:
     runs-on: ubuntu-latest
